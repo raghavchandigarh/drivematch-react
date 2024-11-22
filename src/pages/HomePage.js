@@ -5,22 +5,41 @@ import logo from '../assets/logo.png';
 function HomePage() {
   return (
     <div className="homepage">
-      {/* Hero Section */}
-      <header className="homepage-header">
-        <img src={logo} alt="DriveMatch Logo" className="homepage-logo" />
-        <nav>
-          <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/rent-out">Rent Out Your Vehicle</a></li>
-            <li><a href="/language">Language</a></li>
-            <li><a href="/login">Sign Up/Log In</a></li>
-          </ul>
-        </nav>
+      {/* Header Section */}
+      <header className="header">
+        <div className="header-content">
+          <img src={logo} alt="DriveMatch Logo" className="logo" />
+          <nav className="nav">
+            <ul className="nav-links">
+              <li className="dropdown">
+                <a href="/">Home</a>
+              </li>
+              <li className="dropdown">
+                <a href="/rent-out">Rent Out Your Vehicle</a>
+                <ul className="dropdown-menu">
+                  <li><a href="/rent-out">Option 1</a></li>
+                  <li><a href="/rent-out">Option 2</a></li>
+                </ul>
+              </li>
+              <li className="dropdown">
+                <a href="/language">Language</a>
+                <ul className="dropdown-menu">
+                  <li><a href="/language/en">English</a></li>
+                  <li><a href="/language/es">Spanish</a></li>
+                </ul>
+              </li>
+              <li><a href="/login">Sign Up/Log In</a></li>
+            </ul>
+          </nav>
+        </div>
+        <div className="hero">
+          <h1 className="hero-title">Share a Vehicle, Help Save the Planet</h1>
+          <p className="hero-subtitle">Find the perfect vehicle wherever you need it.</p>
+        </div>
       </header>
 
-      <div className="hero">
-        <h1>Share a Vehicle, Help Save the Planet</h1>
-        <p>Find the perfect vehicle wherever you need it.</p>
+      {/* Search Section */}
+      <div className="search-container">
         <form className="search-form">
           <input type="text" placeholder="Where to?" />
           <select>
@@ -35,7 +54,7 @@ function HomePage() {
         </form>
       </div>
 
-      {/* Footer */}
+      {/* Footer Section */}
       <footer className="footer">
         <p>&copy; 2024 DriveMatch. All rights reserved.</p>
         <a href="/privacy">Privacy Policy</a>

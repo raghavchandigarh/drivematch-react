@@ -1,121 +1,162 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #333;
+  line-height: 1.6;
+}
+
+/* Header Section */
+.header {
+  background: linear-gradient(to bottom, #004d40, #66bb6a);
+  padding: 2rem 1rem;
+  color: white;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+}
+
+.nav {
+  position: relative;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+.nav-links li a:hover {
+  text-decoration: underline;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  color: #333;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.hero {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.hero-title {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+/* Search Section */
+.search-container {
+  background-color: #fff5e4;
+  padding: 2rem;
+  margin: -2rem auto 0 auto;
+  width: 90%;
+  max-width: 800px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.search-form {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.search-form input,
+.search-form select,
+.search-form button {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.search-form button {
+  background-color: #ff5722;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.search-form button:hover {
+  background-color: #e64a19;
+}
+
+/* Footer Section */
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1.5rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer a {
+  color: #00aced;
+  text-decoration: none;
+}
+
+.footer a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile Styles */
+@media screen and (max-width: 768px) {
+  .header-content {
+    flex-direction: column;
   }
-  
-  /* Hero Section */
-  .hero {
-    background: linear-gradient(to bottom, #66bb6a, #a5d6a7);
-    text-align: center;
-    color: white;
-    padding: 4rem 1rem;
-  }
-  
-  .hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-  }
-  
-  .search-form {
-    display: flex;
-    justify-content: center;
+
+  .nav-links {
     flex-wrap: wrap;
-    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
   }
-  
-  .search-form input,
-  .search-form select,
-  .search-form button {
-    padding: 0.75rem;
-    font-size: 1rem;
-    border: none;
-    border-radius: 5px;
+
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
   }
-  
-  .search-form input {
-    flex: 1;
-  }
-  
-  .search-form button {
-    background-color: #ff5722;
-    color: white;
-    cursor: pointer;
-    transition: background 0.3s;
-  }
-  
-  .search-form button:hover {
-    background-color: #e64a19;
-  }
-  
-  /* Navbar */
-  .homepage-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #004d40; /* Original header background color */
-    padding: 1rem 2rem;
-  }
-  
-  .homepage-header .homepage-logo {
-    height: 50px;
-  }
-  
-  .homepage-header ul {
-    list-style: none;
-    display: flex;
-    gap: 1.5rem;
-  }
-  
-  .homepage-header ul li a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-  }
-  
-  .homepage-header ul li a:hover {
-    color: #00aced;
-  }
-  
-  /* Footer */
-  .footer {
-    background-color: #333;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-  }
-  
-  .footer a {
-    color: #00aced;
-    text-decoration: none;
-  }
-  
-  .footer a:hover {
-    text-decoration: underline;
-  }
-  
-  /* Mobile Responsiveness */
-  @media screen and (max-width: 768px) {
-    .search-form {
-      flex-direction: column;
-    }
-  
-    .search-form input,
-    .search-form select,
-    .search-form button {
-      width: 100%;
-    }
-  
-    .homepage-header ul {
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      justify-content: center;
-    }
-  }
-  
+}
