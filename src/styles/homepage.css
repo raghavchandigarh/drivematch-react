@@ -1,0 +1,121 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Hero Section */
+  .hero {
+    background: linear-gradient(to bottom, #66bb6a, #a5d6a7);
+    text-align: center;
+    color: white;
+    padding: 4rem 1rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .search-form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  
+  .search-form input,
+  .search-form select,
+  .search-form button {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .search-form input {
+    flex: 1;
+  }
+  
+  .search-form button {
+    background-color: #ff5722;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+  
+  .search-form button:hover {
+    background-color: #e64a19;
+  }
+  
+  /* Navbar */
+  .homepage-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #004d40; /* Original header background color */
+    padding: 1rem 2rem;
+  }
+  
+  .homepage-header .homepage-logo {
+    height: 50px;
+  }
+  
+  .homepage-header ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+  }
+  
+  .homepage-header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .homepage-header ul li a:hover {
+    color: #00aced;
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .footer a {
+    color: #00aced;
+    text-decoration: none;
+  }
+  
+  .footer a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Mobile Responsiveness */
+  @media screen and (max-width: 768px) {
+    .search-form {
+      flex-direction: column;
+    }
+  
+    .search-form input,
+    .search-form select,
+    .search-form button {
+      width: 100%;
+    }
+  
+    .homepage-header ul {
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      justify-content: center;
+    }
+  }
+  
